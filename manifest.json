@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "Calculateur de moyennes",
+  "version": "1.0",
+
+  "description": "Recalcule votre moyenne générale.",
+
+  "content_scripts": [
+    {
+      "matches": ["*://www.ecoledirecte.com/*"],
+      "js": ["recalculateur.js"],
+      "css": ["recalculé.css"]
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "herozdotexe@gmail.com"
+    }
+  }
+}

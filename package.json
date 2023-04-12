@@ -1,0 +1,13 @@
+{
+  "name": "calculateur-de-moyennes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "recalculateur.js",
+  "scripts": {
+    "start": "web-ext run --firefox=\"C:\\Program Files\\Firefox Developer Edition\\firefox.exe\" --keep-profile-changes --firefox-profile=\"C:\\Users\\heroz\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\54wmqcl8.test\"",
+    "lint": "web-ext lint",
+    "build": "del /q /s web-ext-artifacts && web-ext build"
+  },
+  "author": "Heroz_0",
+  "license": "ISC"
+}
