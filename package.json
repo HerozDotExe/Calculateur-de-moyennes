@@ -8,6 +8,5 @@
     "lint": "web-ext lint",
     "build": "del /q /s web-ext-artifacts && web-ext build"
   },
-  "author": "Heroz_0",
-  "license": "ISC"
+  "author": "Heroz_0"
 }
