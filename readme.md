@@ -1,4 +1,4 @@
-**EXTENSION UNIQUEMENT DISPONIBLE SUR FIREFOX**
+## **EXTENSION UNIQUEMENT DISPONIBLE SUR FIREFOX**
 
 # Calculateur de moyennes ecole directe
 Ce dépos github contient le code source d'une extension qui recalcule les moyennes sur le site de vie scolaire Ecole Directe.
