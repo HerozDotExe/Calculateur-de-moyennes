@@ -8,3 +8,4 @@ J'ai créer cette extension car j'en avais marre de devoir attendre parfois 1 se
 
 ## Comment l'obtenir ?
 Vous pouvez installer cette extension en la téléchargeant depuis la partie "releases" à droite. Il vous suffit ensuite de glisser ce fichier dans le gestionnaire de modules complémentaires de firefox.
+test
