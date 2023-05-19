@@ -22,10 +22,12 @@ function formaterNote(n) {
 
 let éDDMAJModifié = false;
 let éDLMGModifié = false;
-function calculDesNotes() {
+function calculDesNotesDunePeriode(periode) {
   //Petites modifs de la page
   const élémentsDeLaLégende = document.querySelector(
-    "html body app-root div.container-principal ed-authenticated-layout div#main-part div#main ed-eleve-note-lazy-template ed-eleve-notes-template div.double-padding.eleve-note.ed-container div.tab-content.main-container.double-padding.container-bg.ng-star-inserted div#periode3.fade.show.active.ng-star-inserted ed-une-periode.ng-star-inserted div tabset#unePeriode.margin-bottom-10.margin-top-10.nav.nav-tabs-container-bg.flex-column.tab-container div.tab-content tab.active.tab-pane.ng-star-inserted ed-eleve-evaluations.ng-star-inserted div#encart-notes div.bloc-legende.clear.d-print-none.row.ng-star-inserted div.col-lg-6.ng-star-inserted table tbody"
+    "html body app-root div.container-principal ed-authenticated-layout div#main-part div#main ed-eleve-note-lazy-template ed-eleve-notes-template div.double-padding.eleve-note.ed-container div.tab-content.main-container.double-padding.container-bg.ng-star-inserted div#periode" +
+      periode +
+      ".fade.show.active.ng-star-inserted ed-une-periode.ng-star-inserted div tabset#unePeriode.margin-bottom-10.margin-top-10.nav.nav-tabs-container-bg.flex-column.tab-container div.tab-content tab.active.tab-pane.ng-star-inserted ed-eleve-evaluations.ng-star-inserted div#encart-notes div.bloc-legende.clear.d-print-none.row.ng-star-inserted div.col-lg-6.ng-star-inserted table tbody"
   );
   if (
     élémentsDeLaLégende !== null &&
@@ -38,7 +40,9 @@ function calculDesNotes() {
   }
 
   const élémentDeDernièreMiseAJour = document.querySelector(
-    "html body app-root div.container-principal ed-authenticated-layout div#main-part div#main ed-eleve-note-lazy-template ed-eleve-notes-template div.double-padding.eleve-note.ed-container div.tab-content.main-container.double-padding.container-bg.ng-star-inserted div#periode3.fade.show.active.ng-star-inserted ed-une-periode.ng-star-inserted div tabset#unePeriode.margin-bottom-10.margin-top-10.nav.nav-tabs-container-bg.flex-column.tab-container div.tab-content tab.tab-pane.ng-star-inserted.active ed-eleve-evaluations.ng-star-inserted div#encart-notes p.form-text.ng-star-inserted"
+    "html body app-root div.container-principal ed-authenticated-layout div#main-part div#main ed-eleve-note-lazy-template ed-eleve-notes-template div.double-padding.eleve-note.ed-container div.tab-content.main-container.double-padding.container-bg.ng-star-inserted div#periode" +
+      periode +
+      ".fade.show.active.ng-star-inserted ed-une-periode.ng-star-inserted div tabset#unePeriode.margin-bottom-10.margin-top-10.nav.nav-tabs-container-bg.flex-column.tab-container div.tab-content tab.tab-pane.ng-star-inserted.active ed-eleve-evaluations.ng-star-inserted div#encart-notes p.form-text.ng-star-inserted"
   );
   if (élémentDeDernièreMiseAJour !== null && !éDDMAJModifié) {
     élémentDeDernièreMiseAJour.childNodes[1].textContent =
@@ -47,7 +51,9 @@ function calculDesNotes() {
   }
 
   const élémentDeLaMoyenneGénérale = document.querySelector(
-    "html body app-root div.container-principal ed-authenticated-layout div#main-part div#main ed-eleve-note-lazy-template ed-eleve-notes-template div.double-padding.eleve-note.ed-container div.tab-content.main-container.double-padding.container-bg.ng-star-inserted div#periode3.fade.show.active.ng-star-inserted ed-une-periode.ng-star-inserted div tabset#unePeriode.margin-bottom-10.margin-top-10.nav.nav-tabs-container-bg.flex-column.tab-container div.tab-content tab.active.tab-pane.ng-star-inserted ed-eleve-evaluations.ng-star-inserted div#encart-notes table.table.releve.ed-table tbody tr.ng-star-inserted td.moyennegenerale-valeur"
+    "html body app-root div.container-principal ed-authenticated-layout div#main-part div#main ed-eleve-note-lazy-template ed-eleve-notes-template div.double-padding.eleve-note.ed-container div.tab-content.main-container.double-padding.container-bg.ng-star-inserted div#periode" +
+      periode +
+      ".fade.show.active.ng-star-inserted ed-une-periode.ng-star-inserted div tabset#unePeriode.margin-bottom-10.margin-top-10.nav.nav-tabs-container-bg.flex-column.tab-container div.tab-content tab.active.tab-pane.ng-star-inserted ed-eleve-evaluations.ng-star-inserted div#encart-notes table.table.releve.ed-table tbody tr.ng-star-inserted td.moyennegenerale-valeur"
   );
 
   if (élémentDeLaMoyenneGénérale !== null && !éDLMGModifié) {
@@ -58,12 +64,16 @@ function calculDesNotes() {
 
   //Le calcul
   const matières = document.querySelectorAll(
-    "html body app-root div.container-principal ed-authenticated-layout div#main-part div#main ed-eleve-note-lazy-template ed-eleve-notes-template div.double-padding.eleve-note.ed-container div.tab-content.main-container.double-padding.container-bg.ng-star-inserted div#periode3.fade.show.active.ng-star-inserted ed-une-periode.ng-star-inserted div tabset#unePeriode.margin-bottom-10.margin-top-10.nav.nav-tabs-container-bg.flex-column.tab-container div.tab-content tab.active.tab-pane.ng-star-inserted ed-eleve-evaluations.ng-star-inserted div#encart-notes table.table.releve.ed-table tbody tr.ng-star-inserted"
+    "html body app-root div.container-principal ed-authenticated-layout div#main-part div#main ed-eleve-note-lazy-template ed-eleve-notes-template div.double-padding.eleve-note.ed-container div.tab-content.main-container.double-padding.container-bg.ng-star-inserted div#periode" +
+      periode +
+      ".fade.show.active.ng-star-inserted ed-une-periode.ng-star-inserted div tabset#unePeriode.margin-bottom-10.margin-top-10.nav.nav-tabs-container-bg.flex-column.tab-container div.tab-content tab.active.tab-pane.ng-star-inserted ed-eleve-evaluations.ng-star-inserted div#encart-notes table.table.releve.ed-table tbody tr.ng-star-inserted"
   );
 
   if (matières.length !== 0) {
     tableauDesNotes = document.querySelector(
-      "html body app-root div.container-principal ed-authenticated-layout div#main-part div#main ed-eleve-note-lazy-template ed-eleve-notes-template div.double-padding.eleve-note.ed-container div.tab-content.main-container.double-padding.container-bg.ng-star-inserted div#periode3.fade.show.active.ng-star-inserted ed-une-periode.ng-star-inserted div tabset#unePeriode.margin-bottom-10.margin-top-10.nav.nav-tabs-container-bg.flex-column.tab-container div.tab-content tab.active.tab-pane.ng-star-inserted ed-eleve-evaluations.ng-star-inserted div#encart-notes table.table.releve.ed-table"
+      "html body app-root div.container-principal ed-authenticated-layout div#main-part div#main ed-eleve-note-lazy-template ed-eleve-notes-template div.double-padding.eleve-note.ed-container div.tab-content.main-container.double-padding.container-bg.ng-star-inserted div#periode" +
+        periode +
+        ".fade.show.active.ng-star-inserted ed-une-periode.ng-star-inserted div tabset#unePeriode.margin-bottom-10.margin-top-10.nav.nav-tabs-container-bg.flex-column.tab-container div.tab-content tab.active.tab-pane.ng-star-inserted ed-eleve-evaluations.ng-star-inserted div#encart-notes table.table.releve.ed-table"
     );
 
     if (contenuDuTableauDesNotes !== tableauDesNotes.textContent) {
@@ -82,45 +92,50 @@ function calculDesNotes() {
 
             élémentsDesNotes
               .querySelectorAll(
-                "html body app-root div.container-principal ed-authenticated-layout div#main-part div#main ed-eleve-note-lazy-template ed-eleve-notes-template div.double-padding.eleve-note.ed-container div.tab-content.main-container.double-padding.container-bg.ng-star-inserted div#periode3.fade.show.active.ng-star-inserted ed-une-periode.ng-star-inserted div tabset#unePeriode.margin-bottom-10.margin-top-10.nav.nav-tabs-container-bg.flex-column.tab-container div.tab-content tab.active.tab-pane.ng-star-inserted ed-eleve-evaluations.ng-star-inserted div#encart-notes table.table.releve.ed-table tbody tr.ng-star-inserted td.notes button.btn.text-normal.note.margin-whitespace.no-background.no-padding.ng-star-inserted span.valeur.ng-star-inserted"
+                "html body app-root div.container-principal ed-authenticated-layout div#main-part div#main ed-eleve-note-lazy-template ed-eleve-notes-template div.double-padding.eleve-note.ed-container div.tab-content.main-container.double-padding.container-bg.ng-star-inserted div#periode" +
+                  periode +
+                  ".fade.show.active.ng-star-inserted ed-une-periode.ng-star-inserted div tabset#unePeriode.margin-bottom-10.margin-top-10.nav.nav-tabs-container-bg.flex-column.tab-container div.tab-content tab.active.tab-pane.ng-star-inserted ed-eleve-evaluations.ng-star-inserted div#encart-notes table.table.releve.ed-table tbody tr.ng-star-inserted td.notes button.btn.text-normal.note.margin-whitespace.no-background.no-padding.ng-star-inserted span.valeur.ng-star-inserted"
               )
               .forEach((e) => {
-                const numérateur = parseFloat(
-                  e.childNodes[0].textContent.replace(",", ".")
-                );
+                if (e.parentNode.childNodes[0].textContent != "(") {
+                  const numérateur = parseFloat(
+                    e.childNodes[0].textContent.replace(",", ".")
+                  );
 
-                const dénominateur =
-                  e.childNodes[1].className === "quotien ng-star-inserted"
-                    ? parseFloat(
-                        e.childNodes[1].textContent
-                          .slice(2, e.childNodes[1].textContent.length)
-                          .replace(",", ".")
-                      )
-                    : 20;
-                let coeficient =
-                  e.childNodes[2].className === "coef ng-star-inserted"
-                    ? parseFloat(
-                        e.childNodes[2].textContent
-                          .replace("(", "")
-                          .replace(")", "")
-                      )
-                    : 1;
-                if (coeficient === 1 && e.childNodes[3]) {
-                  coeficient =
-                    e.childNodes[3].className === "coef ng-star-inserted"
+                  const dénominateur =
+                    e.childNodes[1].className === "quotien ng-star-inserted"
                       ? parseFloat(
-                          e.childNodes[3].textContent
+                          e.childNodes[1].textContent
+                            .slice(2, e.childNodes[1].textContent.length)
+                            .replace(",", ".")
+                        )
+                      : 20;
+                  let coeficient =
+                    e.childNodes[2].className === "coef ng-star-inserted"
+                      ? parseFloat(
+                          e.childNodes[2].textContent
                             .replace("(", "")
                             .replace(")", "")
                         )
                       : 1;
-                }
+                  if (coeficient === 1 && e.childNodes[3]) {
+                    coeficient =
+                      e.childNodes[3].className === "coef ng-star-inserted"
+                        ? parseFloat(
+                            e.childNodes[3].textContent
+                              .replace("(", "")
+                              .replace(")", "")
+                          )
+                        : 1;
+                  }
 
-                const noteSur20 = (numérateur / dénominateur) * 20;
-                notes.push(noteSur20 * coeficient);
-                coeficients.push(coeficient);
-                // console.log(numérateur, "/", dénominateur, "=>", noteSur20);
+                  const noteSur20 = (numérateur / dénominateur) * 20;
+                  notes.push(noteSur20 * coeficient);
+                  coeficients.push(coeficient);
+                  // console.log(numérateur, "/", dénominateur, "=>", noteSur20);
+                }
               });
+
             if (notes.length !== 0) {
               const notesFinales = notes.reduce(function (a, b) {
                 return a + b;
@@ -155,7 +170,9 @@ function calculDesNotes() {
       let moyenneGénérale;
 
       const élémentsContenantLesMoyennes = document.querySelectorAll(
-        "html body app-root div.container-principal ed-authenticated-layout div#main-part div#main ed-eleve-note-lazy-template ed-eleve-notes-template div.double-padding.eleve-note.ed-container div.tab-content.main-container.double-padding.container-bg.ng-star-inserted div#periode3.fade.show.active.ng-star-inserted ed-une-periode.ng-star-inserted div tabset#unePeriode.margin-bottom-10.margin-top-10.nav.nav-tabs-container-bg.flex-column.tab-container div.tab-content tab.active.tab-pane.ng-star-inserted ed-eleve-evaluations.ng-star-inserted div#encart-notes table.table.releve.ed-table tbody tr.ng-star-inserted td.relevemoyenne.ng-star-inserted span.ng-star-inserted"
+        "html body app-root div.container-principal ed-authenticated-layout div#main-part div#main ed-eleve-note-lazy-template ed-eleve-notes-template div.double-padding.eleve-note.ed-container div.tab-content.main-container.double-padding.container-bg.ng-star-inserted div#periode" +
+          periode +
+          ".fade.show.active.ng-star-inserted ed-une-periode.ng-star-inserted div tabset#unePeriode.margin-bottom-10.margin-top-10.nav.nav-tabs-container-bg.flex-column.tab-container div.tab-content tab.active.tab-pane.ng-star-inserted ed-eleve-evaluations.ng-star-inserted div#encart-notes table.table.releve.ed-table tbody tr.ng-star-inserted td.relevemoyenne.ng-star-inserted span.ng-star-inserted"
       );
 
       let moyennes = [];
@@ -193,5 +210,13 @@ log("En attente du chargement de la page...");
 
 let tableauDesNotes;
 let contenuDuTableauDesNotes;
+
+function calculDesNotes() {
+  const nombreDePériodes = document.querySelectorAll(".nav-tabs li").length
+  for (let index = 0; index < nombreDePériodes + 1; ) {
+    calculDesNotesDunePeriode(index);
+    index++;
+  }
+}
 
 setInterval(calculDesNotes, 500);
