@@ -212,7 +212,7 @@ let tableauDesNotes;
 let contenuDuTableauDesNotes;
 
 function calculDesNotes() {
-  const nombreDePériodes = document.querySelectorAll(".nav-tabs li").length
+  const nombreDePériodes = document.querySelectorAll(".nav-tabs li").length;
   for (let index = 0; index < nombreDePériodes + 1; ) {
     calculDesNotesDunePeriode(index);
     index++;
