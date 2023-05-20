@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Calculateur de moyennes Ecole Directe",
-  "version": "1.0",
+  "version": "0.2",
 
   "description": "Recalcule votre moyenne générale sur École Directe.",
 
