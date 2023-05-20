@@ -3,8 +3,12 @@
     "{abcd1234-1abc-1234-12ab-abcdef123456}": {
       "updates": [
         {
-          "version": "0.1",
-          "update_link": "https://github.com/HerozDotExe/Calculateur-de-moyennes/releases/download/v1.0.0/Calculateur_de_moyenne.xpi"
+          "version": "0.1.0",
+          "update_link": "https://github.com/HerozDotExe/Calculateur-de-moyennes/releases/download/v0.1.0/Calculateur_de_moyenne.xpi"
+        },
+        {
+          "version": "0.2.0",
+          "update_link": "https://github.com/HerozDotExe/Calculateur-de-moyennes/releases/download/v0.2.0/Calculateur_de_moyenne.xpi"
         }
       ]
     }
