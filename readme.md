@@ -1,5 +1,5 @@
 ## **EXTENSION UNIQUEMENT DISPONIBLE SUR FIREFOX**
-## **Cette extension marche actuellement (19/05/23) mais elle peut cesser de fonctionne à tout moment selon les modifications apportés à ecole directe**
+## **Cette extension marche actuellement (19/05/23) mais elle peut cesser de fonctionne à tout moment selon les modifications apportés à ecole directe, et je ne pourrais pas la réparer, n'étant plus au collège...**
 
 # Calculateur de moyennes ecole directe
 Ce dépôt github contient le code source d'une extension qui recalcule les moyennes sur le site de vie scolaire Ecole Directe.
